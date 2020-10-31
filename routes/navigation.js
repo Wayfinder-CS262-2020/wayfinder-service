@@ -4,7 +4,7 @@ var client = require('../app');
 
 router.get('/sbrooms', function (req, res, next) {
   client
-    .many(
+    .query(
       'SELECT roomnumber FROM Building, Room WHERE name = "SB" AND Building.name = Room.containingBuilding;'
     )
     .then((data) => {
