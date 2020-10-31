@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var { app, client } = require('../app');
 var debug = require('debug')('wayfinder-service:server');
 var http = require('http');
 
