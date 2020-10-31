@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-import { client } from '../app';
+var { app, client } = require('../app');
 
 router.get('/sbrooms', function (req, res, next) {
   client
