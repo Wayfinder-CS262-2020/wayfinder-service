@@ -18,15 +18,17 @@ var pg = require('pg');
 //or native libpq bindings
 //var pg = require('pg').native
 
-var conString = process.env.ELEPHANTSQL_URL || `postgres://ruozhckz:${process.env.DB_PASSWORD}@lallah.db.elephantsql.com:5432/ruozhckz`;
+var conString =
+  process.env.ELEPHANTSQL_URL ||
+  `postgres://ruozhckz:${process.env.DB_PASSWORD}@lallah.db.elephantsql.com:5432/ruozhckz`;
 
 var client = new pg.Client(conString);
-client.connect(function(err) {
-  if(err) {
+client.connect(function (err) {
+  if (err) {
     return console.error('could not connect to postgres', err);
   }
-  client.query('SELECT NOW() AS "theTime"', function(err, result) {
-    if(err) {
+  client.query('SELECT NOW() AS "theTime"', function (err, result) {
+    if (err) {
       return console.error('error running query', err);
     }
     console.log(result.rows[0].theTime);
@@ -34,7 +36,6 @@ client.connect(function(err) {
     client.end();
   });
 });
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -50,12 +51,12 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
