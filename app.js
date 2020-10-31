@@ -68,4 +68,4 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-module.exports = [app, client];
+module.exports = { app, client };
