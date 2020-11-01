@@ -51,6 +51,7 @@ function buildingCoord(req, res, next) {
       res.send(data);
     })
     .catch((err) => {
-      next(err);
+      console.log(err);
+      res.sendStatus(404);
     });
 }
