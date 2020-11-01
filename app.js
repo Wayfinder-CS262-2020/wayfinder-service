@@ -46,11 +46,7 @@ function readHelloMessage(req, res) {
 }
 
 function navTest(req, res, next) {
-  db.many(
-    `SELECT roomnumber FROM Building, Room 
-    WHERE name = "SB" 
-    AND Building.name = Room.containingBuilding;`
-  )
+  db.many(`SELECT * FROM Building`)
     .then((data) => {
       res.send(data);
     })
