@@ -3,7 +3,6 @@ var router = express.Router();
 var { app, db } = require('../app');
 
 router.get('/', function (req, res, next) {
-  res.send(client);
   db.many(
     `SELECT roomnumber FROM Building, Room
                   WHERE name = 'SB'
