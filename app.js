@@ -45,7 +45,7 @@ function readHelloMessage(req, res) {
   res.send('This is the service for wayfinder');
 }
 
-function building(req, res, next) {
+function buildingCoord(req, res, next) {
   db.oneOrNone(`SELECT * FROM Building WHERE name=${req.params.id}`)
     .then((data) => {
       res.send(data);
