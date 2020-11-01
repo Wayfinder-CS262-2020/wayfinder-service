@@ -18,7 +18,7 @@ const router = express.Router();
 router.use(express.json());
 
 router.get('/', readHelloMessage);
-router.get('/building/:', buildingCoord);
+router.get('/building/:name', buildingCoord);
 
 app.use(router);
 app.use(errorHandler);
@@ -26,7 +26,7 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // Implement the CRUD operations.
 
-function errorHandler(req, res, next, err) {
+function errorHandler(err, req, res) {
   if (app.get('env') === 'development') {
     console.log(err);
   }
@@ -46,12 +46,11 @@ function readHelloMessage(req, res) {
 }
 
 function buildingCoord(req, res, next) {
-  db.oneOrNone(`SELECT * FROM Building WHERE name=${req.params.id}`)
+  db.oneOrNone(`SELECT * FROM Building WHERE name=${req.params.name}`)
     .then((data) => {
       res.send(data);
     })
     .catch((err) => {
-      console.log(err);
-      res.sendStatus(404);
+      next(err);
     });
 }
