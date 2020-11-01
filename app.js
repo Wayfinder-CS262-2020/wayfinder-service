@@ -18,6 +18,7 @@ const router = express.Router();
 router.use(express.json());
 
 router.get('/', readHelloMessage);
+router.get('/navtest', navTest);
 
 app.use(router);
 app.use(errorHandler);
@@ -41,11 +42,13 @@ function returnDataOr404(res, data) {
 }
 
 function readHelloMessage(req, res) {
-  res.send('This is Joels monopoly serivice, enjoy!');
+  res.send('This is the service for wayfinder');
 }
 
-function readPlayers(req, res, next) {
-  db.many('SELECT * FROM Player')
+function navTest(req, res, next) {
+  db.many(
+    'SELECT roomnumber FROM Building, Room WHERE name = "SB" AND Building.name = Room.containingBuilding;'
+  )
     .then((data) => {
       res.send(data);
     })
