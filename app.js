@@ -18,7 +18,7 @@ const router = express.Router();
 router.use(express.json());
 
 router.get('/', readHelloMessage);
-router.get('/navtest', navTest);
+router.get('/building/:', buildingCoord);
 
 app.use(router);
 app.use(errorHandler);
@@ -45,8 +45,8 @@ function readHelloMessage(req, res) {
   res.send('This is the service for wayfinder');
 }
 
-function navTest(req, res, next) {
-  db.many(`SELECT * FROM Building`)
+function building(req, res, next) {
+  db.oneOrNone(`SELECT * FROM Building WHERE name=${req.params.id}`)
     .then((data) => {
       res.send(data);
     })
