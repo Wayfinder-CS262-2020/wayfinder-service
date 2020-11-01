@@ -50,7 +50,7 @@ function buildingCoord(req, res, next) {
     `SELECT coordinatesX, coordinatesY FROM Building WHERE name='${req.params.name}'`
   )
     .then((data) => {
-      res.send(data);
+      returnDataOr404(res, data);
     })
     .catch((err) => {
       next(err);
