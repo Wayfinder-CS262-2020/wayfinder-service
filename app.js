@@ -46,7 +46,9 @@ function readHelloMessage(req, res) {
 }
 
 function buildingCoord(req, res, next) {
-  db.oneOrNone(`SELECT * FROM Building WHERE name='${req.params.name}'`)
+  db.oneOrNone(
+    `SELECT coordinatesX, coordinatesY FROM Building WHERE name='${req.params.name}'`
+  )
     .then((data) => {
       res.send(data);
     })
