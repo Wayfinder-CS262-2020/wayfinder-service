@@ -1,18 +1,4 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var navigationRouter = require('./routes/navigation');
-
-var app = express();
-
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
+// Set up the database connection.
 
 const pgp = require('pg-promise')();
 const db = pgp({
@@ -23,34 +9,47 @@ const db = pgp({
   password: process.env.PASSWORD,
 });
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+// Configure the server and its routes.
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+const router = express.Router();
+router.use(express.json());
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/navigation', navigationRouter);
+router.get('/', readHelloMessage);
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
-});
+app.use(router);
+app.use(errorHandler);
+app.listen(port, () => console.log(`Listening on port ${port}`));
 
-// error handler
-app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+// Implement the CRUD operations.
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
+function errorHandler(err, req, res) {
+  if (app.get('env') === 'development') {
+    console.log(err);
+  }
+  res.sendStatus(err.status || 500);
+}
 
-module.exports = { app, db };
+function returnDataOr404(res, data) {
+  if (data == null) {
+    res.sendStatus(404);
+  } else {
+    res.send(data);
+  }
+}
+
+function readHelloMessage(req, res) {
+  res.send('This is Joels monopoly serivice, enjoy!');
+}
+
+function readPlayers(req, res, next) {
+  db.many('SELECT * FROM Player')
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      next(err);
+    });
+}
