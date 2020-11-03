@@ -15,7 +15,7 @@ FROM Building
 SELECT interiorCoordinatesX, interiorCoordinatesY
 FROM Room, Building
     -- roomNumber and containingBuilding will be user-input
-    WHERE roomNumber = 259
+    WHERE roomNumber = '259'
     AND containingBuilding = 'NH'
     AND Building.name = Room.containingBuilding
     ;
