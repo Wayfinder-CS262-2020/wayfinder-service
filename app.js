@@ -1,68 +1,58 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+// Set up the database connection.
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const pgp = require('pg-promise')();
+const db = pgp({
+  host: 'lallah.db.elephantsql.com',
+  port: 5432,
+  database: process.env.USER,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+});
 
-var app = express();
+// Configure the server and its routes.
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+const router = express.Router();
+router.use(express.json());
+
+router.get('/', readHelloMessage);
+router.get('/building/:name', buildingCoord);
+
+app.use(router);
+app.use(errorHandler);
+app.listen(port, () => console.log(`Listening on port ${port}`));
+
+// Implement the CRUD operations.
+
+function errorHandler(err, req, res) {
+  if (app.get('env') === 'development') {
+    console.log(err);
+  }
+  res.sendStatus(err.status || 500);
 }
 
-//Connect to database
-var pg = require('pg');
-//or native libpq bindings
-//var pg = require('pg').native
-
-var conString = process.env.ELEPHANTSQL_URL || `postgres://ruozhckz:${process.env.DB_PASSWORD}@lallah.db.elephantsql.com:5432/ruozhckz`;
-
-var client = new pg.Client(conString);
-client.connect(function(err) {
-  if(err) {
-    return console.error('could not connect to postgres', err);
+function returnDataOr404(res, data) {
+  if (data == null) {
+    res.sendStatus(404);
+  } else {
+    res.send(data);
   }
-  client.query('SELECT NOW() AS "theTime"', function(err, result) {
-    if(err) {
-      return console.error('error running query', err);
-    }
-    console.log(result.rows[0].theTime);
-    //output: Tue Jan 15 2013 19:12:47 GMT-600 (CST)
-    client.end();
-  });
-});
+}
 
+function readHelloMessage(req, res) {
+  res.send('This is the service for wayfinder');
+}
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
-
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
-
-module.exports = app;
+function buildingCoord(req, res, next) {
+  db.oneOrNone(
+    `SELECT coordinatesX, coordinatesY FROM Building WHERE name='${req.params.name}'`
+  )
+    .then((data) => {
+      returnDataOr404(res, data);
+    })
+    .catch((err) => {
+      next(err);
+    });
+}
