@@ -43,7 +43,7 @@ function returnDataOr404(res, data) {
 }
 
 function roomData(req, res, next) {
-  let params = req.params.split('+');
+  let params = req.params.buildingroom.split('+');
   db.oneOrNone(
     `SELECT floorNumber, interiorCoordinatesX, interiorCoordinatesY
     FROM Room, Building
