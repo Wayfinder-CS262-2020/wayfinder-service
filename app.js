@@ -48,8 +48,8 @@ function roomData(req, res, next) {
     `SELECT floorNumber, interiorCoordinatesX, interiorCoordinatesY
     FROM Room, Building
         -- roomNumber and containingBuilding will be user-input
-        WHERE roomNumber = $1
-        AND containingBuilding = $2
+        WHERE roomNumber = $2
+        AND containingBuilding = $1
         AND Building.name = Room.containingBuilding
         ;`,
     params
@@ -68,7 +68,8 @@ function readHelloMessage(req, res) {
 
 function buildingCoord(req, res, next) {
   db.oneOrNone(
-    `SELECT coordinatesX, coordinatesY FROM Building WHERE name='${req.params.name}'`
+    `SELECT coordinatesX, coordinatesY FROM Building WHERE name='$1'`,
+    req.params.name
   )
     .then((data) => {
       returnDataOr404(res, data);
