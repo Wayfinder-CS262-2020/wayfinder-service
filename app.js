@@ -19,6 +19,7 @@ router.use(express.json());
 
 router.get('/', readHelloMessage);
 router.get('/building/:name', buildingCoord);
+router.get('/room/:buildingroom', roomData);
 
 app.use(router);
 app.use(errorHandler);
@@ -39,6 +40,26 @@ function returnDataOr404(res, data) {
   } else {
     res.send(data);
   }
+}
+
+function roomData(req, res, next) {
+  let params = req.params.split('+');
+  db.oneOrNone(
+    `SELECT floorNumber, interiorCoordinatesX, interiorCoordinatesY
+    FROM Room, Building
+        -- roomNumber and containingBuilding will be user-input
+        WHERE roomNumber = $1
+        AND containingBuilding = $2
+        AND Building.name = Room.containingBuilding
+        ;`,
+    params
+  )
+    .then((data) => {
+      returnDataOr404(res, data);
+    })
+    .catch((err) => {
+      next(err);
+    });
 }
 
 function readHelloMessage(req, res) {
