@@ -19,6 +19,7 @@ router.use(express.json());
 
 router.get('/', readHelloMessage);
 router.get('/building/:name', buildingCoord);
+router.get('/room/:buildingroom', roomData);
 
 app.use(router);
 app.use(errorHandler);
@@ -41,13 +42,34 @@ function returnDataOr404(res, data) {
   }
 }
 
+function roomData(req, res, next) {
+  let params = req.params.buildingroom.split('+');
+  db.oneOrNone(
+    `SELECT floorNumber, interiorCoordinatesX, interiorCoordinatesY
+    FROM Room, Building
+        -- roomNumber and containingBuilding will be user-input
+        WHERE roomNumber = $2
+        AND containingBuilding = $1
+        AND Building.name = Room.containingBuilding
+        ;`,
+    params
+  )
+    .then((data) => {
+      returnDataOr404(res, data);
+    })
+    .catch((err) => {
+      next(err);
+    });
+}
+
 function readHelloMessage(req, res) {
   res.send('This is the service for wayfinder');
 }
 
 function buildingCoord(req, res, next) {
   db.oneOrNone(
-    `SELECT coordinatesX, coordinatesY FROM Building WHERE name='${req.params.name}'`
+    `SELECT coordinatesX, coordinatesY FROM Building WHERE name='$1'`,
+    req.params.name
   )
     .then((data) => {
       returnDataOr404(res, data);
