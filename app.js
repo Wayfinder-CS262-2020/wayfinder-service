@@ -34,14 +34,6 @@ function errorHandler(err, req, res) {
   res.status(err.status || 500).send();
 }
 
-function returnDataOr404(res, data) {
-  if (data == null) {
-    res.status(404).send('Not Found');
-  } else {
-    res.send(data);
-  }
-}
-
 function readHelloMessage(req, res) {
   res.send('This is the service for wayfinder');
 }
@@ -53,7 +45,11 @@ function buildingCoord(req, res, next) {
     [req.params.name]
   )
     .then((data) => {
-      returnDataOr404(res, data);
+      if (data == null) {
+        res.status(404).send('Not Found');
+      } else {
+        res.send(data);
+      }
     })
     .catch((err) => {
       next(err);
@@ -74,7 +70,11 @@ function roomData(req, res, next) {
     params
   )
     .then((data) => {
-      returnDataOr404(res, data);
+      if (data == null) {
+        res.status(404).send('Not Found');
+      } else {
+        res.send(data);
+      }
     })
     .catch((err) => {
       next(err);
