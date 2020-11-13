@@ -31,7 +31,15 @@ function errorHandler(err, req, res, next) {
   if (app.get('env') === 'development') {
     console.log(err);
   }
-  res.status(err.status || 500).send(err.message);
+  res.sendStatus(err.status || 500);
+}
+
+function returnDataOr404(res, data) {
+  if (data == null) {
+    res.sendStatus(404);
+  } else {
+    res.send(data);
+  }
 }
 
 function readHelloMessage(req, res) {
@@ -45,11 +53,7 @@ function buildingCoord(req, res, next) {
     [req.params.name]
   )
     .then((data) => {
-      if (data == null) {
-        res.status(404).send('Not Found');
-      } else {
-        res.send(data);
-      }
+      returnDataOr404(res, data);
     })
     .catch((err) => {
       next(err);
@@ -70,11 +74,7 @@ function roomData(req, res, next) {
     params
   )
     .then((data) => {
-      if (data == null) {
-        res.status(404).send('Not Found');
-      } else {
-        res.send(data);
-      }
+      returnDataOr404(res, data);
     })
     .catch((err) => {
       next(err);
