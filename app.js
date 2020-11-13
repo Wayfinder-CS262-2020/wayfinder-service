@@ -31,12 +31,12 @@ function errorHandler(err, req, res) {
   if (app.get('env') === 'development') {
     console.log(err);
   }
-  res.sendStatus(err.status || 500);
+  res.status(err.status || 500).send();
 }
 
 function returnDataOr404(res, data) {
   if (data == null) {
-    res.sendStatus(404);
+    res.status(404).send('Not Found');
   } else {
     res.send(data);
   }
