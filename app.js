@@ -27,11 +27,11 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // Implement the CRUD operations.
 
-function errorHandler(err, req, res) {
+function errorHandler(err, req, res, next) {
   if (app.get('env') === 'development') {
     console.log(err);
   }
-  res.status(err.status || 500).send();
+  res.status(err.status || 500).send(err.message);
 }
 
 function readHelloMessage(req, res) {
