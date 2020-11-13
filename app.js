@@ -31,7 +31,7 @@ function errorHandler(err, req, res, next) {
   if (app.get('env') === 'development') {
     console.log(err);
   }
-  res.sendStatus(err.status || 500);
+  res.status(err.status || 500).send(err.message);
 }
 
 function returnDataOr404(res, data) {
@@ -49,7 +49,7 @@ function readHelloMessage(req, res) {
 // Returns the longitude and latitude of the building
 function buildingCoord(req, res, next) {
   db.oneOrNone(
-    `SELECT coordinatesX, coordinatesY FROM Building WHERE name='$1'`,
+    `SELECT coordinatesX, coordinatesY FROM Building WHERE name=$1`,
     [req.params.name]
   )
     .then((data) => {
