@@ -7,7 +7,7 @@ CREATE TABLE Building (
     name varchar(100),
     -- X and Y coords refer to the specific map coordinates
     coordinatesX float,
-    coordinatesY float,
+    coordinatesY float
     -- entranceCoordinatesX float,
     -- entranceCoordinatesY float, --For finding different entrances
                                    --Might need an array?
