@@ -7,10 +7,11 @@ CREATE TABLE Building (
     name varchar(100),
     -- X and Y coords refer to the specific map coordinates
     coordinatesX float,
-    coordinatesY float,
+    coordinatesY float
     -- entranceCoordinatesX float,
-    -- entranceCoordinatesY float, --For finding different entrances
-                                   --Might need an array?
+    -- entranceCoordinatesY float, 
+    --For finding different entrances
+    --Might need an array?
 );
 
 CREATE TABLE Room(
@@ -39,7 +40,7 @@ GRANT SELECT ON Room TO PUBLIC;
 
 
 ---------------------------------------------Science Building Rooms---------------------------------------------
-INSERT INTO Building VALUES ('SB', 0, 0); --Coordinates are currently a placeholder
+INSERT INTO Building VALUES ('SB', 42.931039, -85.5894825); 
 
 --Basement
 INSERT INTO ROOM VALUES ('SB', '001', 'Civil Engineering Lab', 0, 3382, 2083);
