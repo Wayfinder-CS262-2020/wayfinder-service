@@ -27,11 +27,11 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // Implement the CRUD operations.
 
-function errorHandler(err, req, res) {
+function errorHandler(err, req, res, next) {
   if (app.get('env') === 'development') {
     console.log(err);
   }
-  res.sendStatus(err.status || 500);
+  res.status(err.status || 500).send(err.message);
 }
 
 function returnDataOr404(res, data) {
@@ -42,6 +42,25 @@ function returnDataOr404(res, data) {
   }
 }
 
+function readHelloMessage(req, res) {
+  res.send('This is the service for wayfinder');
+}
+
+// Returns the longitude and latitude of the building
+function buildingCoord(req, res, next) {
+  db.oneOrNone(
+    `SELECT coordinatesX, coordinatesY FROM Building WHERE name=$1`,
+    [req.params.name]
+  )
+    .then((data) => {
+      returnDataOr404(res, data);
+    })
+    .catch((err) => {
+      next(err);
+    });
+}
+
+// Returns the roomData to the client from the database from the format BUILDING+ROOM
 function roomData(req, res, next) {
   let params = req.params.buildingroom.split('+');
   db.oneOrNone(
@@ -53,23 +72,6 @@ function roomData(req, res, next) {
         AND Building.name = Room.containingBuilding
         ;`,
     params
-  )
-    .then((data) => {
-      returnDataOr404(res, data);
-    })
-    .catch((err) => {
-      next(err);
-    });
-}
-
-function readHelloMessage(req, res) {
-  res.send('This is the service for wayfinder');
-}
-
-function buildingCoord(req, res, next) {
-  db.oneOrNone(
-    `SELECT coordinatesX, coordinatesY FROM Building WHERE name='$1'`,
-    req.params.name
   )
     .then((data) => {
       returnDataOr404(res, data);
