@@ -39,6 +39,7 @@ function returnDataOr404(res, data) {
   if (data == null) {
     res.sendStatus(404);
   } else {
+    console.log(data)
     res.send(data);
   }
 }
