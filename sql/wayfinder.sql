@@ -38,9 +38,17 @@ GRANT SELECT ON Room TO PUBLIC;
 -- INSERT INTO ROOM VALUES ('SB', '010', 'Lecture Hall', 0, 1, 1);
 -- INSERT INTO ROOM VALUES('NH', '259', 'Classroom', 2, 12, 23);
 
+------------------------------------------------North Hall Rooms------------------------------------------------
+INSERT INTO Building VALUES ('NH', 42.931609, -85.588781);
+--
+INSERT INTO ROOM VALUES ('NH', '000', 'Test', 0, 0, 0);
+
 
 ---------------------------------------------Science Building Rooms---------------------------------------------
 INSERT INTO Building VALUES ('SB', 42.931017, -85.588925); 
+
+
+
 
 --Basement
 INSERT INTO ROOM VALUES ('SB', '001', 'Civil Engineering Lab', 0, 3382, 2083);
