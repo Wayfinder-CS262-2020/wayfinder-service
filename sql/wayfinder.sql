@@ -40,7 +40,7 @@ GRANT SELECT ON Room TO PUBLIC;
 
 
 ---------------------------------------------Science Building Rooms---------------------------------------------
-INSERT INTO Building VALUES ('SB', 42.931039, -85.5894825); 
+INSERT INTO Building VALUES ('SB', -85.5894825, 42.931039); 
 
 --Basement
 INSERT INTO ROOM VALUES ('SB', '001', 'Civil Engineering Lab', 0, 3382, 2083);
