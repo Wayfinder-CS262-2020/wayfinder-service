@@ -6,8 +6,8 @@ DROP TABLE IF EXISTS Room;
 CREATE TABLE Building (
     name varchar(100),
     -- X and Y coords refer to the specific map coordinates
-    coordinatesX float,
-    coordinatesY float
+    lat float,
+    lon float
     -- entranceCoordinatesX float,
     -- entranceCoordinatesY float, 
     --For finding different entrances
@@ -40,7 +40,7 @@ GRANT SELECT ON Room TO PUBLIC;
 
 
 ---------------------------------------------Science Building Rooms---------------------------------------------
-INSERT INTO Building VALUES ('SB', -85.5894825, 42.931039); 
+INSERT INTO Building VALUES ('SB', 42.931017, -85.588925); 
 
 --Basement
 INSERT INTO ROOM VALUES ('SB', '001', 'Civil Engineering Lab', 0, 3382, 2083);

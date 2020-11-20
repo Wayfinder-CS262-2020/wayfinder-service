@@ -65,7 +65,7 @@ function buildingCoord(req, res, next) {
 function roomData(req, res, next) {
   let params = req.params.buildingroom.split('+');
   db.oneOrNone(
-    `SELECT floorNumber, interiorCoordinatesX, interiorCoordinatesY, coordinatesX, coordinatesY
+    `SELECT floorNumber, interiorCoordinatesX, interiorCoordinatesY, lat , lon
     FROM Room, Building
         -- roomNumber and containingBuilding will be user-input
         WHERE roomNumber = $2
