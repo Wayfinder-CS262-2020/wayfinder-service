@@ -21,6 +21,7 @@ router.get('/', readHelloMessage);
 router.get('/building/:name', buildingCoord);
 router.get('/room/:buildingroom', roomData);
 
+app.disable('etag');
 app.use(router);
 app.use(errorHandler);
 app.listen(port, () => console.log(`Listening on port ${port}`));
@@ -77,6 +78,7 @@ function roomData(req, res, next) {
       returnDataOr404(res, data);
     })
     .catch((err) => {
+      console.log(err)
       next(err);
     });
 }
