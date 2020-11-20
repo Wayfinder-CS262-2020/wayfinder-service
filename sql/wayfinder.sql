@@ -8,6 +8,8 @@ CREATE TABLE Building (
     -- X and Y coords refer to the specific map coordinates
     lat float,
     lon float
+    coordinatesX float,
+    coordinatesY float
     -- entranceCoordinatesX float,
     -- entranceCoordinatesY float, 
     --For finding different entrances
