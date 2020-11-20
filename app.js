@@ -51,7 +51,7 @@ function readHelloMessage(req, res) {
 // Returns the longitude and latitude of the building
 function buildingCoord(req, res, next) {
   db.oneOrNone(
-    `SELECT coordinatesX, coordinatesY FROM Building WHERE name=$1`,
+    `SELECT lat, lon FROM Building WHERE name=$1`,
     [req.params.name]
   )
     .then((data) => {
