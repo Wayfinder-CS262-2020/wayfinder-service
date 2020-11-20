@@ -21,6 +21,7 @@ router.get('/', readHelloMessage);
 router.get('/building/:name', buildingCoord);
 router.get('/room/:buildingroom', roomData);
 
+app.disable('etag');
 app.use(router);
 app.use(errorHandler);
 app.listen(port, () => console.log(`Listening on port ${port}`));
@@ -38,6 +39,7 @@ function returnDataOr404(res, data) {
   if (data == null) {
     res.sendStatus(404);
   } else {
+    console.log(data)
     res.send(data);
   }
 }
@@ -64,7 +66,7 @@ function buildingCoord(req, res, next) {
 function roomData(req, res, next) {
   let params = req.params.buildingroom.split('+');
   db.oneOrNone(
-    `SELECT floorNumber, interiorCoordinatesX, interiorCoordinatesY, coordinatesX, coordinatesY
+    `SELECT floorNumber, interiorCoordinatesX, interiorCoordinatesY, lat , lon
     FROM Room, Building
         -- roomNumber and containingBuilding will be user-input
         WHERE roomNumber = $2
@@ -77,6 +79,7 @@ function roomData(req, res, next) {
       returnDataOr404(res, data);
     })
     .catch((err) => {
+      console.log(err)
       next(err);
     });
 }
