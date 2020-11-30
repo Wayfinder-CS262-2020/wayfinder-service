@@ -130,12 +130,55 @@ INSERT INTO ROOM VALUES ('SB', '400', 'Observatory', 4, 3117, 2070);
 
 
 
+---------------------------------------------Covenant Fine Arts Center---------------------------------------------
 
 
+--1st floor
+INSERT INTO ROOM VALUES ('CFAC', '100', 'Auditorium', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '107', 'Recital Hall', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '115', 'Swets Choral Hall', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '125', 'Multi-Purpose Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '135', 'Instrumental Hall', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '151', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '152', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '153', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '154', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '155', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '156', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '157', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '158', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '159', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '160', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '161', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '161', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '163', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '166', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '169', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '171', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '173', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '175', 'Practice Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '168', 'Choral Studio', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '170', 'Choral Studio', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '174', 'Choral Studio', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '176', 'Choral Studio', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '177', 'String Studio', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '178', 'Voice Teaching Studio', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '179', 'Voice Studio', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '181', 'Orchestra Studio', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '183', 'Band Studio', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '185', 'Piano Studio', 0, 0, 0);
 
-
-
-
+--2nd floor
+INSERT INTO ROOM VALUES ('CFAC', '222', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '224', 'Music Electronics Lab', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '227', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '229', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '230', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '251', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '252', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '255', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '263', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '265', 'Classroom', 0, 0, 0);
 
 
 
