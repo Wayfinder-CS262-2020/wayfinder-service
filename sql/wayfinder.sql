@@ -178,10 +178,49 @@ INSERT INTO ROOM VALUES ('CFAC', '251', 'Classroom', 0, 0, 0);
 INSERT INTO ROOM VALUES ('CFAC', '252', 'Classroom', 0, 0, 0);
 INSERT INTO ROOM VALUES ('CFAC', '255', 'Classroom', 0, 0, 0);
 INSERT INTO ROOM VALUES ('CFAC', '263', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('CFAC', '264', 'Classroom', 0, 0, 0);
 INSERT INTO ROOM VALUES ('CFAC', '265', 'Classroom', 0, 0, 0);
 
 
+---------------------------------------------Hiemenga Hall---------------------------------------------
 
+--2nd Floor
+INSERT INTO ROOM VALUES ('HH', '211', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '213', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '221', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '225', 'Instruct Graphics', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '226', 'Audio Visual', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '227', 'Prod', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '228', 'Video Prod', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '231', 'Workshop', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '232', 'TV Studio/Classroom', 0, 0, 0);
 
+--3rd Floor
+INSERT INTO ROOM VALUES ('HH', '314', 'Seminar', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '315', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '316', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '317', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '320', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '321', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '323', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '331', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '333', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '334', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '335', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '336', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '337', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '339', 'Classroom', 0, 0, 0);
 
-
+--4th Floor
+INSERT INTO ROOM VALUES ('HH', '428', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '429', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '430', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '429', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '431', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '432', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '462', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '463', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '466', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '467', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '477', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('HH', '494', 'Lab', 0, 0, 0);
