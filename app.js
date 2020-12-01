@@ -102,7 +102,7 @@ function roomData(req, res, next) {
 function auth(req, res, next) {
   const email = req.body.email;
   const password = req.body.password;
-  console.log(JSON.stringify(req.body))
+  console.log(req.body)
   if (username && password) {
     db.oneOrNone(`SELECT pass FROM accounts WHERE email = $1`, [
       email,
