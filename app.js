@@ -15,22 +15,17 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const bcrypt = require('bcrypt');
-const cors = require('cors')
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors({
-  origin: 'https://grey-star-562270.postman.co/'
-}));
+
 
 const port = process.env.PORT || 3000;
 const router = express.Router();
 router.use(express.json());
 
 const accessTokenSecret = process.env.JWTSECRET
-
-
 
 router.get('/', readHelloMessage);
 router.get('/building/:name', buildingCoord);
@@ -107,6 +102,7 @@ function roomData(req, res, next) {
 function auth(req, res, next) {
   const email = req.body.email;
   const password = req.body.password;
+  console.log(JSON.stringify(req.body))
   if (username && password) {
     db.oneOrNone(`SELECT pass FROM accounts WHERE email = $1`, [
       email,
