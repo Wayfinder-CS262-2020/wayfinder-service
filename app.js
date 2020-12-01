@@ -109,7 +109,7 @@ function auth(req, res, next) {
     ])
       .then((data) => {
         if (data) {
-          console.log(data)
+          // console.log(data)
           if (bcrypt.compareSync(password, data)) {
             const accessToken = jwt.sign({ username: user.username }, accessTokenSecret)
             res.json(
