@@ -100,6 +100,7 @@ function roomData(req, res, next) {
     });
 }
 
+// Login function, POST request with email and password
 function auth(req, res, next) {
   const email = req.body.email;
   const username = req.body.email.split('@')[0]
@@ -108,16 +109,16 @@ function auth(req, res, next) {
   if (email && password) {
     db.oneOrNone(`SELECT pass FROM accounts WHERE email = $1`, [
       email,
-    ])
+    ]) // Request the hashed password from the db
       .then((data) => {
         if (data) {
           console.log(data.pass)
 
-          if (bcrypt.compareSync(password, data.pass)) {
-            const accessToken = jwt.sign({ username: username }, accessTokenSecret)
+          if (bcrypt.compareSync(password, data.pass)) { // compare the hashed password with the login password
+            const accessToken = jwt.sign({ username: username }, accessTokenSecret) // create a signed jwt
             res.json(
               {
-                accessToken
+                accessToken // respond with the token
               }
             );
           } else {
@@ -135,14 +136,15 @@ function auth(req, res, next) {
   }
 }
 
+// Creates a new user
 function createUser(req, res, next) {
   const email = req.body.email;
   const username = req.body.email.split('@')[0]
   const password = req.body.password;
-  const hash = bcrypt.hashSync(password, 10);
-  db.one(`INSERT INTO Accounts(username, pass, email) VALUES ($1, $2, $3)`, [username, hash, email]).then(
+  const hash = bcrypt.hashSync(password, 10); // create hash of the password
+  db.one(`INSERT INTO Accounts(username, pass, email) VALUES ($1, $2, $3)`, [username, hash, email]).then( // create a new user with that hashed password
     data => {
-      res.send(data);
+      res.send(data); // send the response
     }
   ).catch(err => {
     next(err)
