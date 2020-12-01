@@ -112,9 +112,9 @@ function auth(req, res, next) {
           console.log(data)
           if (bcrypt.compareSync(password, data)) {
             const accessToken = jwt.sign({ username: user.username }, accessTokenSecret)
-            res.json({
+            res.json(
               accessToken
-            });
+            );
           } else {
 
             res.send('Invalid Login Details!')
