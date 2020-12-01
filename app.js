@@ -137,7 +137,7 @@ function createUser(req, res, next) {
   const username = req.body.email.split('@')[0]
   const password = req.body.password;
   const hash = bcrypt.hashSync(password, 10);
-  db.one(`INSERT INTO Accounts(username, password, email) VALUES ($1, $2, $3)`, [username, hash, email]).then(
+  db.one(`INSERT INTO Accounts(username, pass, email) VALUES ($1, $2, $3)`, [username, hash, email]).then(
     data => {
       res.send(data);
     }
