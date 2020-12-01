@@ -117,7 +117,7 @@ function auth(req, res, next) {
             const accessToken = jwt.sign({ username: username }, accessTokenSecret)
             res.json(
               {
-                data: "test"
+                accessToken
               }
             );
           } else {
