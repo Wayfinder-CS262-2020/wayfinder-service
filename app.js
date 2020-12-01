@@ -20,7 +20,9 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors())
+app.use(cors({
+  origin: 'https://grey-star-562270.postman.co/'
+}));
 
 const port = process.env.PORT || 3000;
 const router = express.Router();
