@@ -7,7 +7,7 @@ CREATE TABLE Building (
     name varchar(100),
     -- X and Y coords refer to the specific map coordinates
     lat float,
-    lon float
+    lon float,
     coordinatesX float,
     coordinatesY float
     -- entranceCoordinatesX float,
@@ -28,11 +28,11 @@ CREATE TABLE Room(
 );
 
 CREATE TABLE IF NOT EXISTS Accounts(
-    id int(11) NOT NULL SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     username varchar(50) NOT NULL,
     pass varchar(255) NOT NULL,
     email varchar(100) NOT NULL
-) 
+);
 
 GRANT SELECT ON Building TO PUBLIC;
 GRANT SELECT ON Room TO PUBLIC;
@@ -40,7 +40,7 @@ GRANT SELECT ON Accounts TO PUBLIC;
 
 ------------------------------- User Input --------------------------------
 
-INSER INTO Accounts VALUES ('1','admin','12345','admin@calvin.edu')
+INSERT INTO Accounts VALUES ('1','admin','12345','admin@calvin.edu');
 
 -- Sample Data
 -- INSERT INTO Building VALUES ('SB', 0, 0);
