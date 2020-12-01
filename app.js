@@ -12,10 +12,19 @@ const db = pgp({
 // Configure the server and its routes.
 
 const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const bcrypt = require('bcrypt');
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 const port = process.env.PORT || 3000;
 const router = express.Router();
 router.use(express.json());
+
+const accessTokenSecret = process.env.JWTSECRET
 
 router.get('/', readHelloMessage);
 router.get('/building/:name', buildingCoord);
@@ -39,7 +48,7 @@ function returnDataOr404(res, data) {
   if (data == null) {
     res.sendStatus(404);
   } else {
-    console.log(data)
+    console.log(data);
     res.send(data);
   }
 }
@@ -50,10 +59,7 @@ function readHelloMessage(req, res) {
 
 // Returns the longitude and latitude of the building
 function buildingCoord(req, res, next) {
-  db.oneOrNone(
-    `SELECT lat, lon FROM Building WHERE name=$1`,
-    [req.params.name]
-  )
+  db.oneOrNone(`SELECT lat, lon FROM Building WHERE name=$1`, [req.params.name])
     .then((data) => {
       returnDataOr404(res, data);
     })
@@ -79,7 +85,51 @@ function roomData(req, res, next) {
       returnDataOr404(res, data);
     })
     .catch((err) => {
-      console.log(err)
+      console.log(err);
       next(err);
     });
+}
+
+function auth(req, res, next) {
+  const email = req.body.email;
+  const password = req.body.password;
+  if (username && password) {
+    db.oneOrNone(`SELECT pass FROM accounts WHERE email = $1`, [
+      email,
+    ])
+      .then((data) => {
+        if (data) {
+          console.log(data)
+          if (bcrypt.compareSync(password, data)) {
+            const accessToken = jwt.sign({ username: user.username }, accessTokenSecret)
+            res.json({
+              accessToken
+            });
+          } else {
+
+            res.send('Invalid Login Details!')
+          }
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        next(err)
+      });
+  } else {
+    res.send('Login Details not recieved!')
+  }
+}
+
+function createUser(req, res, next) {
+  const email = req.body.email;
+  const username = req.body.email.split('@')[0]
+  const password = req.body.password;
+  const hash = bcrypt.hashSync(password, 10);
+  db.one(`INSERT INTO Accounts(username, password, email) VALUES ($1, $2, $3)`, [username, hash, email]).then(
+    data => {
+      res.send(data);
+    }
+  ).catch(err => {
+    next(err)
+  })
 }

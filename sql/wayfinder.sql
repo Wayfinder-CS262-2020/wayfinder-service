@@ -27,10 +27,20 @@ CREATE TABLE Room(
     interiorCoordinatesY float
 );
 
+CREATE TABLE IF NOT EXISTS Accounts(
+    id int(11) NOT NULL SERIAL PRIMARY KEY,
+    username varchar(50) NOT NULL,
+    pass varchar(255) NOT NULL,
+    email varchar(100) NOT NULL
+) 
 
 GRANT SELECT ON Building TO PUBLIC;
 GRANT SELECT ON Room TO PUBLIC;
+GRANT SELECT ON Accounts TO PUBLIC;
 
+------------------------------- User Input --------------------------------
+
+INSER INTO Accounts VALUES ('1','admin','12345','admin@calvin.edu')
 
 -- Sample Data
 -- INSERT INTO Building VALUES ('SB', 0, 0);
