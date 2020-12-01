@@ -101,9 +101,10 @@ function roomData(req, res, next) {
 
 function auth(req, res, next) {
   const email = req.body.email;
+  const username = req.body.email.split('@')[0]
   const password = req.body.password;
   console.log(req.body)
-  if (username && password) {
+  if (email && password) {
     db.oneOrNone(`SELECT pass FROM accounts WHERE email = $1`, [
       email,
     ])
@@ -111,7 +112,7 @@ function auth(req, res, next) {
         if (data) {
           // console.log(data)
           if (bcrypt.compareSync(password, data)) {
-            const accessToken = jwt.sign({ username: user.username }, accessTokenSecret)
+            const accessToken = jwt.sign({ username: username }, accessTokenSecret)
             res.json(
               {
                 data: "test"
