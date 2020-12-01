@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS Building;
 DROP TABLE IF EXISTS Room;
+-- DROP TABLE IF EXISTS Accounts;
 
 --Schema 
 
@@ -29,9 +30,9 @@ CREATE TABLE Room(
 
 CREATE TABLE IF NOT EXISTS Accounts(
     id SERIAL PRIMARY KEY,
-    username varchar(50) NOT NULL,
+    username varchar(50) NOT NULL UNIQUE,
     pass varchar(255) NOT NULL,
-    email varchar(100) NOT NULL
+    email varchar(100) NOT NULL UNIQUE
 );
 
 GRANT SELECT ON Building TO PUBLIC;
