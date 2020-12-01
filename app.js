@@ -29,6 +29,8 @@ const accessTokenSecret = process.env.JWTSECRET
 router.get('/', readHelloMessage);
 router.get('/building/:name', buildingCoord);
 router.get('/room/:buildingroom', roomData);
+router.post('/auth/login', auth);
+router.post('/auth/create', createUser)
 
 app.disable('etag');
 app.use(router);
