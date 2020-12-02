@@ -327,6 +327,7 @@ INSERT INTO ROOM VALUES ('DH', '145', 'Storage', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '150', 'Research/Preparation', 1, 0, 0);
 
 --2nd Floor
+INSERT INTO ROOM VALUES ('DH', '200', 'Chemistry Stock', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '202', 'Idf/Elec.', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '203', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '204', '', 2, 0, 0);
@@ -512,14 +513,68 @@ INSERT INTO ROOM VALUES ('NH', '298', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('NH', '299', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('NH', '299A', 'Office', 2, 0, 0);
 
+---------------------------------------------Spoelhof University Center---------------------------------------------
 
-
-
-
-
-
-
-
+--1st Floor
+INSERT INTO ROOM VALUES ('SC', '100', 'Storage', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '101', 'Classroom', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '101A', 'Storage', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '101B', 'Mechanical', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '101C', 'Color Prints', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '101D', 'Cust.', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '102', 'Classroom', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '102A', 'Storage', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '103A', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '103B', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '103C', 'Comm.', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '103D', 'Electrical Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '103E', 'Storage', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '104', 'Classroom', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '104A', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '104B', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '105', 'Classroom', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '105A', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '105B', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '106', 'Sculpture Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '106A', '', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '106B', 'Sculpture Gas Kiln Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '106C', 'Electric Kiln Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '106D', '', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '107', 'Men', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '108', 'Women', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '109', 'VAC.', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '110', 'Cust.', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '120', 'Dark Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '121', 'Lab', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '122', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '123', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '124', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '125', 'Classroom', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '126', 'Woodshop', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '127', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '128', 'Conference Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '129', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '130', 'Classroom', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '131', 'Lower Lobby', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '131A', 'Men', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '131B', 'Women', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '131C', 'Dressing Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '131D', 'Dressing Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '131E', 'Green Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '131F', 'Storage', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '131G', 'Mechanical', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '131H', 'Storage', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '132', 'Art Deptarment Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '133', 'Costume Shop', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '135', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '136', 'Mechanical Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '136A', 'Elevator Equipment', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '137', 'Laundry', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '150', 'Art History Lecture Hall', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '150A', 'Mechanical', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '150B', 'Equipment', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '178', '', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '182', 'Lab Theater', 1, 0, 0);
 
 
 
