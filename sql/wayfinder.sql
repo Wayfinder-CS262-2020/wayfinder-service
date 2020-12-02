@@ -228,11 +228,35 @@ INSERT INTO ROOM VALUES ('HH', '494', 'Lab', 4, 0, 0);
 ---------------------------------------------Devries Hall---------------------------------------------
 
 --Basement
+INSERT INTO ROOM VALUES ('DH', '004', 'Elevator Equipment', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '011', 'Lounge', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '012', 'IDF/Elec', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '013', 'Admin Office', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '013A', 'Conference Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '013B', 'Office', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '013C', 'Storage', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '014', 'Men', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '014A', '', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '018', 'Restroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '020', 'Women', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '020A', '', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '023', 'Demonstration Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '024', 'Office', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '026', 'Office', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '028', 'Isolation Room', 0, 0, 0);
-INSERT INTO ROOM VALUES ('DH', '042', 'Isolation', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '029', 'Storage', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '030', 'Storage', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '031', 'Storage', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '032', 'Storage', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '033', 'Iso.', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '034', 'Procedure', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '034A', 'Holding', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '038', 'Storage', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '040', 'Mechanical', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '042', 'Isolation', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '043', 'J.C.', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '044', 'Storage', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '045A', 'Mechanical', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '047', 'Cubicle Holding', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '048', 'Procedure', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '048A', 'Procedure', 0, 0, 0);
@@ -241,6 +265,7 @@ INSERT INTO ROOM VALUES ('DH', '052', 'Surgical Room', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '053', 'Rodent Surgical Suite', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '053', 'Holding', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '054', 'Scrub', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '056', 'J.C.', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '057', 'Pen Room', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '058', 'Surgical Prep', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '059', 'Flexible Holding', 0, 0, 0);
@@ -248,38 +273,98 @@ INSERT INTO ROOM VALUES ('DH', '060', 'Recovery', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '061', 'Large Holding', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '062', 'Surgical Room', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '063', 'Large Holding', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '064', 'Scrub', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '065', 'Large Holding', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '066', 'Equipment Wash', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '067', '', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '067A', '', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '068', 'Transfer', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '071', 'Clean Storage', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '073', 'Feed and Bed Storage', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '074', 'Decontamination Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '075', 'Hub', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '075A', 'Restroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '075B', '', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '079', 'Gas Manifold', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '081', 'Generator/Trash', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '083', 'Secured Receiving', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '085A', 'Mechanical Crawl Space', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '087', 'Generator/Trash', 0, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '087A', '', 0, 0, 0);
 
 --1st Floor
+INSERT INTO ROOM VALUES ('DH', '100', 'Department Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '101', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '102', 'IDL/Elec Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '103', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '105', 'Office', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '106', 'Anatomy', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '107', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '109', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '111', 'Office', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '112', 'Botany', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '113', 'Office', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '112A', 'Growth Chamber', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '112B', 'Propigation Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '115', 'Conference', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '117', 'Greenhouse', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '120', 'Biology Museum', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '117A', 'Potting Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '123', 'Office', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '124', 'Field Biology', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '125', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '127', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '129', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '131', 'Office', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '132', 'Zoology', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '133', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '135', 'Office', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '137', 'Aquarium Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '138', 'Men', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '140', 'Women', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '142', 'Research/Preparation', 1, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '145', 'Storage', 1, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '150', 'Research/Preparation', 1, 0, 0);
 
 --2nd Floor
+INSERT INTO ROOM VALUES ('DH', '202', 'Idf/Elec.', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '203', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '204', '', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '205', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '206', 'Cell Biology Imunology', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '207', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '208', 'Cell Culture', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '209', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '211', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '212', 'Biology Research', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '213', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '215', 'Research', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '216', 'Biology Research', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '218', 'Chemistry Research', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '220', 'Chemistry Research', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '221', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '222', 'Molecular Biology', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '223', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '224', 'Biochemistry', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '225', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '227', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '229', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '231', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '232', 'General Chemistry', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '223', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '235', 'Computation Chemistry', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '235A', '', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '242', 'Cust.', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '245', 'Storage', 2, 0, 0);
 
 --3rd Floor
+INSERT INTO ROOM VALUES ('DH', '300', 'Chemistry Stock', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '300A', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '301', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '303', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '305', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '307', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '302', 'IDF Elec.', 3, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '306', 'Quantitative/General Chemistry', 3, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '311', 'Research', 3, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '312', 'Physical Chemistry', 3, 0, 0);
@@ -291,6 +376,13 @@ INSERT INTO ROOM VALUES ('DH', '324', 'Advanced Synthesis', 3, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '325', 'Research', 3, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '331', 'Research', 3, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '332', 'Organic Chemistry', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '333', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '335', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '337', 'Storage', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '338', 'Men', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '340', 'Women', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '342', 'Cust.', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '345', 'Storage', 3, 0, 0);
 
 ---------------------------------------------North Hall---------------------------------------------
 
@@ -331,15 +423,6 @@ INSERT INTO ROOM VALUES ('NH', '261', 'Classroom', 2, 0, 0);
 INSERT INTO ROOM VALUES ('NH', '276', 'Classroom', 2, 0, 0);
 INSERT INTO ROOM VALUES ('NH', '294', 'Seminar', 2, 0, 0);
 INSERT INTO ROOM VALUES ('NH', '295', 'Classroom', 2, 0, 0);
-
-
-
-
-
-
-
-
-
 
 
 
