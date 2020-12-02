@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS Building;
 DROP TABLE IF EXISTS Room;
+-- DROP TABLE IF EXISTS Accounts;
 
 --Schema 
 
@@ -7,7 +8,7 @@ CREATE TABLE Building (
     name varchar(100),
     -- X and Y coords refer to the specific map coordinates
     lat float,
-    lon float
+    lon float,
     coordinatesX float,
     coordinatesY float
     -- entranceCoordinatesX float,
@@ -27,10 +28,20 @@ CREATE TABLE Room(
     interiorCoordinatesY float
 );
 
+CREATE TABLE IF NOT EXISTS Accounts(
+    id SERIAL PRIMARY KEY,
+    username varchar(50) NOT NULL UNIQUE,
+    pass varchar(255) NOT NULL,
+    email varchar(100) NOT NULL UNIQUE
+);
 
 GRANT SELECT ON Building TO PUBLIC;
 GRANT SELECT ON Room TO PUBLIC;
+GRANT SELECT ON Accounts TO PUBLIC;
 
+------------------------------- User Input --------------------------------
+
+INSERT INTO Accounts VALUES ('1','admin','12345','admin@calvin.edu');
 
 -- Sample Data
 -- INSERT INTO Building VALUES ('SB', 0, 0);

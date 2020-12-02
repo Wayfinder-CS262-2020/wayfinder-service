@@ -1,0 +1,7 @@
+POST https://wayfinder-de-auth-gzffdob0fkfq.herokuapp.com/auth/login
+Content-Type: application/json
+
+{
+    "email": "qwerty12@calvin.edu",
+    "password" : "strongpassword"
+}
