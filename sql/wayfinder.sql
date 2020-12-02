@@ -292,6 +292,50 @@ INSERT INTO ROOM VALUES ('DH', '325', 'Research', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '331', 'Research', 0, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '332', 'Organic Chemistry', 0, 0, 0);
 
+---------------------------------------------North Hall---------------------------------------------
+
+--Basement
+INSERT INTO ROOM VALUES ('NH', '050', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '051', 'Map Library', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '053', 'Classroom/Lab', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '054', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '056', 'Seminar', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '057', 'Classroom/Lab', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '059', 'Classroom/lab', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '061', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '063', 'Research', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '064', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '065', 'Lab', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '065A', 'Lab', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '067', 'G.I.S. Lab', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '073', 'Research', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '076', '', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '076A', '', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '076B', '', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '078', 'Lecture Hall', 0, 0, 0);
+
+--1st Floor
+INSERT INTO ROOM VALUES ('NH', '157', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '159', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '161', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '165', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '168', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '180', 'Computer Room', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '198', 'Classroom', 0, 0, 0);
+
+--2nd Floor
+INSERT INTO ROOM VALUES ('NH', '251', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '253', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '259', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '261', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '276', 'Classroom', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '294', 'Seminar', 0, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '295', 'Classroom', 0, 0, 0);
+
+
+
+
+
 
 
 
