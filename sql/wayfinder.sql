@@ -40,62 +40,150 @@ GRANT SELECT ON Room TO PUBLIC;
 -- INSERT INTO ROOM VALUES ('SB', '010', 'Lecture Hall', 0, 1, 1);
 -- INSERT INTO ROOM VALUES('NH', '259', 'Classroom', 2, 12, 23);
 
-------------------------------------------------North Hall Rooms------------------------------------------------
-INSERT INTO Building VALUES ('NH', 42.931609, -85.588781);
---
-INSERT INTO ROOM VALUES ('NH', '000', 'Test', 0, 0, 0);
 
-
----------------------------------------------Science Building Rooms---------------------------------------------
+---------------------------------------------Science Building---------------------------------------------
 INSERT INTO Building VALUES ('SB', 42.931017, -85.588925); 
-
-
-
 
 --Basement
 INSERT INTO ROOM VALUES ('SB', '001', 'Civil Engineering Lab', 0, 3382, 2083);
 INSERT INTO ROOM VALUES ('SB', '002', 'Research Lab', 0, 3328, 2556);
 INSERT INTO ROOM VALUES ('SB', '002A', 'Research Lab', 0, 3613, 2482);
 INSERT INTO ROOM VALUES ('SB', '003', 'Engineering Instrumentation', 0, 3058, 2490);
+INSERT INTO ROOM VALUES ('SB', '004', 'Men', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '005', 'Women', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '006', 'Custodial', 0, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '010', 'Lecture Hall', 0, 2712, 2008);
+INSERT INTO ROOM VALUES ('SB', '030', 'Isotope', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '030A', '', 0, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '034', 'Research Lab', 0, 2103, 2238);
 INSERT INTO ROOM VALUES ('SB', '035', 'Physics Research', 0, 1857,2713 );
+INSERT INTO ROOM VALUES ('SB', '037', 'Mechanical', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '040', 'Mechanical', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '041', 'Men', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '043', 'Custodial', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '045', 'Mechanical', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '045A', 'Mechanical', 0, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '046', 'Chemical Engineering', 0, 1491, 2001);
 INSERT INTO ROOM VALUES ('SB', '046A', 'NMR', 0, 1206, 1656);
 INSERT INTO ROOM VALUES ('SB', '047', 'Thermo Fluids', 0, 1585, 1293);
+INSERT INTO ROOM VALUES ('SB', '050', 'Water Treatment', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '052', 'Mechanical', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '055', 'Storage Hazardouse Waste', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '060', 'Mechanical', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '061', 'Women', 0, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '062', 'Research Lab', 0, 1860, 939);
 INSERT INTO ROOM VALUES ('SB', '064', 'Research Lab', 0, 1947, 1258);
+INSERT INTO ROOM VALUES ('SB', '065', 'Office', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '073', 'Custodial', 0, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '075', 'Mechanical', 0, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '076', 'Electronics', 0, 2508, 943);
+INSERT INTO ROOM VALUES ('SB', '080', 'Mechanical', 0, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '081', 'Dat./COMM', 0, 3024, 1098);
 INSERT INTO ROOM VALUES ('SB', '082', 'Computer Lab', 0, 2709, 1309);
+INSERT INTO ROOM VALUES ('SB', '085', 'Custodial', 0, 0, 0);
 
 --1st floor
 INSERT INTO ROOM VALUES ('SB', '101', 'Classroom', 1, 3344, 2112);
 INSERT INTO ROOM VALUES ('SB', '102', 'Classroom', 1, 3488, 2562);
 INSERT INTO ROOM VALUES ('SB', '103', 'Classroom', 1, 3064, 2596);
+INSERT INTO ROOM VALUES ('SB', '104', 'Men', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '105', 'Women', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '106', 'J.C', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '110', 'Classroom', 1, 2834, 1636);
 INSERT INTO ROOM VALUES ('SB', '113', 'Lab', 1, 2232, 1936);
+INSERT INTO ROOM VALUES ('SB', '115', 'Storage', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '117', 'Engineering Tech', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '117A', 'Comm', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '120', 'Computer Lab', 1, 2534, 2274);
 INSERT INTO ROOM VALUES ('SB', '128', 'Computer Lab', 1, 2034, 2356);
+INSERT INTO ROOM VALUES ('SB', '130', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '131', 'Office', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '132', 'Engineering Research', 1, 2086, 2770);
+INSERT INTO ROOM VALUES ('SB', '134', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '135', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '136', 'Engineering Lounge', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '136A', 'Testing', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '138', 'Engineering Department', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '140', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '141', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '142', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '143', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '145', 'Office', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '149', 'Physics', 1, 1314, 1468);
+INSERT INTO ROOM VALUES ('SB', '149A', '', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '149B', '', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '149C', '', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '150', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '152', 'Optics', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '155', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '156', 'Reading', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '156A', 'Department Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '156B', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '156C', 'Staging', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '157', 'Physics & Astronomy Lounge', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '160', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '161', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '173', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '175', 'Office', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '176', 'Physics', 1, 2328, 920);
 INSERT INTO ROOM VALUES ('SB', '177', 'Physics', 1, 2610, 1088);
+INSERT INTO ROOM VALUES ('SB', '180', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '181', 'Office', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '184', 'Conference Room', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '184A', 'Lab', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '184B', 'Lab', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '184C', 'Astronomy', 1, 0, 0);
 
 --2nd Floor
 INSERT INTO ROOM VALUES ('SB', '201', 'Classroom', 2, 3312, 1940);
 INSERT INTO ROOM VALUES ('SB', '202', 'Classroom', 2, 3448, 2596);
 INSERT INTO ROOM VALUES ('SB', '203', 'Classroom', 2, 3068, 2508);
+INSERT INTO ROOM VALUES ('SB', '204', 'Men', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '205', 'Women', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '206', '', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '210', 'Microbiology Genetics', 2, 2800, 1856);
+INSERT INTO ROOM VALUES ('SB', '215', 'Laboratory Preparation', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '215A', 'Storage', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '216', 'Nursing Storage', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '216A', 'Storage', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '218', 'Storage', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '220', 'Nursing Skills Laboratory', 2, 2612, 2284);
+INSERT INTO ROOM VALUES ('SB', '220A', '', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '229', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '230', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '231', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '232', 'Conference', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '233', 'Conference', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '234', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '235', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '236', 'Nursing Laboratory Skills', 2, 1876, 2356);
+INSERT INTO ROOM VALUES ('SB', '236A', '', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '237', 'Elementary Science and Astronomy', 2, 1608, 2228);
+INSERT INTO ROOM VALUES ('SB', '237A', 'Student Supplies', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '240', 'Nursing Department Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '241', 'Restroom', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '243', 'Storage', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '244', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '245', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '250', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '251', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '252', 'Research', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '255', 'Elementary Education Science Classroom', 2, 1444, 1412);
 INSERT INTO ROOM VALUES ('SB', '256', 'Physiology', 2, 1632, 1268);
+INSERT INTO ROOM VALUES ('SB', '257', 'Image', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '258', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '259', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '260', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '261', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '262', 'Restroom', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '273', 'Lab', 2, 2200, 520);
 INSERT INTO ROOM VALUES ('SB', '275', 'Biotech Intrumentation', 2, 2428, 656);
 INSERT INTO ROOM VALUES ('SB', '276', 'General Biology', 2, 2308, 956);
 INSERT INTO ROOM VALUES ('SB', '277', 'Introductory Biology', 2, 2584, 1092);
+INSERT INTO ROOM VALUES ('SB', '280', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '281', 'Office', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '284', 'Research', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '285', 'Insect Room', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '283', 'Research', 2, 3024, 1208);
 INSERT INTO ROOM VALUES ('SB', '284', 'Research', 2, 3164, 1300);
 
@@ -103,35 +191,61 @@ INSERT INTO ROOM VALUES ('SB', '284', 'Research', 2, 3164, 1300);
 INSERT INTO ROOM VALUES ('SB', '301', 'Classroom', 3, 3282, 1968);
 INSERT INTO ROOM VALUES ('SB', '302', 'Classroom', 3, 3441, 2616);
 INSERT INTO ROOM VALUES ('SB', '303', 'Classroom', 3, 3066, 2496);
+INSERT INTO ROOM VALUES ('SB', '304', 'Men', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '305', 'Women', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '306', 'Custodial', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '310', 'Psychology Resource & Sem.', 3, 2763, 1929);
 INSERT INTO ROOM VALUES ('SB', '311', '', 3, 2583, 1797);
 INSERT INTO ROOM VALUES ('SB', '312', '', 3, 2448, 2034);
 INSERT INTO ROOM VALUES ('SB', '313', '', 3, 2502, 1746);
 INSERT INTO ROOM VALUES ('SB', '314', '', 3, 2364, 1986);
 INSERT INTO ROOM VALUES ('SB', '316', '', 3, 2286, 1953);
+INSERT INTO ROOM VALUES ('SB', '318', 'Storage', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '319', 'Computer Research', 3, 2376, 1659);
+INSERT INTO ROOM VALUES ('SB', '320', 'Research', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '321', 'Computer Science Resource', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '321A', 'Server Workroom', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '322', 'Data Comm.', 3, 1917, 1932);
+INSERT INTO ROOM VALUES ('SB', '325', 'Psychology Department Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '326', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '330', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '332', 'Conference', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '334', 'Classroom', 3, 2181, 2385);
+INSERT INTO ROOM VALUES ('SB', '335', 'Office', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '336', 'Classroom', 3, 1851, 2388);
 INSERT INTO ROOM VALUES ('SB', '337', 'Computer Hardware Lab', 3, 1584, 2265);
+INSERT INTO ROOM VALUES ('SB', '340', 'Lab', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '341', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '342', 'Storage', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '343', 'Psychology Lab Classroom', 3, 1446, 1917);
+INSERT INTO ROOM VALUES ('SB', '344', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '345', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '350', 'Research', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '352', 'Psychology Computer Lab', 3, 1113, 1176);
 INSERT INTO ROOM VALUES ('SB', '353', '', 3, 1431, 1347);
 INSERT INTO ROOM VALUES ('SB', '353A', 'Research', 3, 1284, 1533);
+INSERT INTO ROOM VALUES ('SB', '353B', 'Research', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '353C', 'Research', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '354', 'Unix Classroom', 3, 1773, 1158);
+INSERT INTO ROOM VALUES ('SB', '355', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '360', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '361', 'Office', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '372', 'PC Classroom', 3, 2403, 1179);
+INSERT INTO ROOM VALUES ('SB', '373', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '375', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '380', 'Office', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SB', '381', 'Lab', 3, 3021, 1044);
 INSERT INTO ROOM VALUES ('SB', '382', 'Classroom', 3, 2736, 1401);
 INSERT INTO ROOM VALUES ('SB', '383', 'Research', 3, 3072, 1191);
+INSERT INTO ROOM VALUES ('SB', '384', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '385', 'Office', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SB', '386', 'Office', 3, 0, 0);
 
 --4th Floor
 INSERT INTO ROOM VALUES ('SB', '400', 'Observatory', 4, 3117, 2070);
 
 
-
-
 ---------------------------------------------Covenant Fine Arts Center---------------------------------------------
-
 
 --1st floor
 INSERT INTO ROOM VALUES ('CFAC', '100', 'Auditorium', 1, 0, 0);
@@ -224,6 +338,7 @@ INSERT INTO ROOM VALUES ('HH', '466', 'Classroom', 4, 0, 0);
 INSERT INTO ROOM VALUES ('HH', '467', 'Classroom', 4, 0, 0);
 INSERT INTO ROOM VALUES ('HH', '477', 'Classroom', 4, 0, 0);
 INSERT INTO ROOM VALUES ('HH', '494', 'Lab', 4, 0, 0);
+
 
 ---------------------------------------------Devries Hall---------------------------------------------
 
@@ -355,7 +470,7 @@ INSERT INTO ROOM VALUES ('DH', '232', 'General Chemistry', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '223', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '235', 'Computation Chemistry', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '235A', '', 2, 0, 0);
-INSERT INTO ROOM VALUES ('DH', '242', 'Custodian', 2, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '242', 'Custodial', 2, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '245', 'Storage', 2, 0, 0);
 
 --3rd Floor
@@ -382,10 +497,12 @@ INSERT INTO ROOM VALUES ('DH', '335', 'Office', 3, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '337', 'Storage', 3, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '338', 'Men', 3, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '340', 'Women', 3, 0, 0);
-INSERT INTO ROOM VALUES ('DH', '342', 'Custodian', 3, 0, 0);
+INSERT INTO ROOM VALUES ('DH', '342', 'Custodial', 3, 0, 0);
 INSERT INTO ROOM VALUES ('DH', '345', 'Storage', 3, 0, 0);
 
+
 ---------------------------------------------North Hall---------------------------------------------
+INSERT INTO Building VALUES ('NH', 42.931609, -85.588781);
 
 --Basement
 INSERT INTO ROOM VALUES ('NH', '048', 'Office', 0, 0, 0);
@@ -498,7 +615,7 @@ INSERT INTO ROOM VALUES ('NH', '284', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('NH', '284', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('NH', '285', 'Office', 2, 0, 0);
 INSERT INTO ROOM VALUES ('NH', '286', 'Office', 2, 0, 0);
-INSERT INTO ROOM VALUES ('NH', '287', 'Custodian', 2, 0, 0);
+INSERT INTO ROOM VALUES ('NH', '287', 'Custodial', 2, 0, 0);
 INSERT INTO ROOM VALUES ('NH', '288A', 'Mechanical', 2, 0, 0);
 INSERT INTO ROOM VALUES ('NH', '289', 'Restroom', 2, 0, 0);
 INSERT INTO ROOM VALUES ('NH', '290', 'Office', 2, 0, 0);
@@ -515,13 +632,14 @@ INSERT INTO ROOM VALUES ('NH', '299A', 'Office', 2, 0, 0);
 
 ---------------------------------------------Spoelhof University Center---------------------------------------------
 
+
 --1st Floor
 INSERT INTO ROOM VALUES ('SC', '100', 'Storage', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '101', 'Classroom', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '101A', 'Storage', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '101B', 'Mechanical', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '101C', 'Color Prints', 1, 0, 0);
-INSERT INTO ROOM VALUES ('SC', '101D', 'Custodian', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '101D', 'Custodial', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '102', 'Classroom', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '102A', 'Storage', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '103A', 'Office', 1, 0, 0);
@@ -543,7 +661,7 @@ INSERT INTO ROOM VALUES ('SC', '106D', '', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '107', 'Men', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '108', 'Women', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '109', 'VAC.', 1, 0, 0);
-INSERT INTO ROOM VALUES ('SC', '110', 'Custodian', 1, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '110', 'Custodial', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '120', 'Dark Room', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '121', 'Lab', 1, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '122', 'Office', 1, 0, 0);
@@ -585,7 +703,7 @@ INSERT INTO ROOM VALUES ('SC', '201', 'Seminar', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '202', 'Classroom', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '203', 'Classroom', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '204', 'Classroom', 2, 0, 0);
-INSERT INTO ROOM VALUES ('SC', '205A', 'Custodian', 2, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '205A', 'Custodial', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '205B', 'Men', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '205C', 'Women', 2, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '206', 'Mechanical Room', 2, 0, 0);
@@ -690,7 +808,7 @@ INSERT INTO ROOM VALUES ('SC', '301C', '', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '301D', '', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '301E', '', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '302', '', 3, 0, 0);
-INSERT INTO ROOM VALUES ('SC', '302A', 'Custodian', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '302A', 'Custodial', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '303', 'Office', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '305', 'Office', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '307', 'Office', 3, 0, 0);
@@ -754,7 +872,7 @@ INSERT INTO ROOM VALUES ('SC', '361E', '', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '361F', '', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '362A', 'Men', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '362B', 'Women', 3, 0, 0);
-INSERT INTO ROOM VALUES ('SC', '362C', 'Custodian', 3, 0, 0);
+INSERT INTO ROOM VALUES ('SC', '362C', 'Custodial', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '364', 'Student Life', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '364A', '', 3, 0, 0);
 INSERT INTO ROOM VALUES ('SC', '364B', 'Office', 3, 0, 0);
