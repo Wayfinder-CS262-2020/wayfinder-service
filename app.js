@@ -126,6 +126,8 @@ function auth(req, res, next) {
 
             res.send('Invalid Login Details!')
           }
+        } else {
+          res.send('Invalid Login Details!')
         }
       })
       .catch((err) => {
