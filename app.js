@@ -111,6 +111,7 @@ function auth(req, res, next) {
       email,
     ]) // Request the hashed password from the db
       .then((data) => {
+        console.log("here is the data!", data)
         if (data) {
           console.log(data.pass)
 
