@@ -258,8 +258,6 @@ INSERT INTO ROOM VALUES ('SB', '400', 'Observatory', 4, 3117, 2070);
 
 ---------------------------------------------Covenant Fine Arts Center---------------------------------------------
 
-INSERT INTO Building VALUES ('SB', 42.93056036906299, -85.5858649054885); 
-
 --1st floor
 INSERT INTO ROOM VALUES ('CFAC', '100', 'Auditorium', 1, 0, 0);
 INSERT INTO ROOM VALUES ('CFAC', '101', 'Lobby', 1, 0, 0);
@@ -438,8 +436,6 @@ INSERT INTO ROOM VALUES ('CFAC', '298A', 'Storage', 2, 0, 0);
 
 
 ---------------------------------------------Hiemenga Hall---------------------------------------------
-
-INSERT INTO Building VALUES ('HH', 42.930052685425544, -85.58827437636255); 
 
 --2nd Floor
 INSERT INTO ROOM VALUES ('HH', '208', 'Restroom', 2, 0, 0);
@@ -626,8 +622,6 @@ INSERT INTO ROOM VALUES ('HH', '495', 'Staff Lounge', 4, 0, 0);
 
 
 ---------------------------------------------Devries Hall---------------------------------------------
-
-INSERT INTO Building VALUES ('DH', 42.93095538640771, -85.58959694177832); 
 
 --Basement
 INSERT INTO ROOM VALUES ('DH', '004', 'Elevator Equipment', 0, 3142, 1870);
@@ -920,7 +914,6 @@ INSERT INTO ROOM VALUES ('NH', '299A', 'Office', 2, 0, 0);
 
 ---------------------------------------------Spoelhof University Center---------------------------------------------
 
-INSERT INTO Building VALUES ('SC', 42.92982066526718, -85.58927361150656); 
 
 --1st Floor
 INSERT INTO ROOM VALUES ('SC', '100', 'Storage', 1, 0, 0);
