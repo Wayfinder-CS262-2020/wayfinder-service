@@ -258,7 +258,7 @@ INSERT INTO ROOM VALUES ('SB', '400', 'Observatory', 4, 3117, 2070);
 
 ---------------------------------------------Covenant Fine Arts Center---------------------------------------------
 
-INSERT INTO Building VALUES ('SB', 42.93056036906299, -85.5858649054885); 
+INSERT INTO Building VALUES ('CFAC', 42.93056036906299, -85.5858649054885); 
 
 --1st floor
 INSERT INTO ROOM VALUES ('CFAC', '100', 'Auditorium', 1, 0, 0);
