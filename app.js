@@ -105,17 +105,16 @@ function auth(req, res, next) {
   const email = req.body.email;
   const username = req.body.email.split('@')[0]
   const password = req.body.password;
-  console.log(req.body)
   if (email && password) {
     db.oneOrNone(`SELECT pass FROM accounts WHERE email = $1`, [
       email,
     ]) // Request the hashed password from the db
       .then((data) => {
         if (data) {
-          console.log(data.pass)
 
           if (bcrypt.compareSync(password, data.pass)) { // compare the hashed password with the login password
             const accessToken = jwt.sign({ username: username }, accessTokenSecret) // create a signed jwt
+            console.log("login successful")
             res.json(
               {
                 accessToken // respond with the token
@@ -123,8 +122,10 @@ function auth(req, res, next) {
             );
           } else {
 
-            res.send('Invalid Login Details!')
+            res.send('Invalid Login Details!') // Password incorrect
           }
+        } else {
+          res.send('Invalid Login Details!') // Email incorrect
         }
       })
       .catch((err) => {
